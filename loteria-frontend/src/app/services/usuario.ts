@@ -1,21 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Usuario } from '../models/usuario';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
 
-  private apiUrl = 'http://localhost:8080/usuarios';
+  private api = 'http://localhost:8080';
 
   constructor(private http: HttpClient) {}
 
-  listar(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  listar() {
+    return this.http.get<Usuario[]>(`${this.api}/usuarios`);
   }
 
-  crear(usuario: any): Observable<any> {
-    return this.http.post(this.apiUrl, usuario);
+  crear(usuario: any) {
+    return this.http.post(`${this.api}/usuarios`, usuario);
+  }
+
+  login(nombre: string, password: string) {
+    return this.http.post(`${this.api}/usuarios/login`, {
+      nombre,
+      password
+    });
   }
 }
