@@ -1,5 +1,14 @@
 <h2>Usuarios</h2>
 
+<form (ngSubmit)="crearUsuario()">
+
+  <input [(ngModel)]="nombre" name="nombre" placeholder="Nombre" required>
+  <input [(ngModel)]="saldo" name="saldo" type="number" placeholder="Saldo" required>
+
+  <button type="submit">Crear</button>
+
+</form>
+
 <ul>
   <li *ngFor="let u of usuarios">
     {{ u.nombre }} - Saldo: {{ u.saldo }}
