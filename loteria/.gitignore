@@ -1,0 +1,59 @@
+# ========================
+# MAVEN / BUILD
+# ========================
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ========================
+# LOGS
+# ========================
+*.log
+
+# ========================
+# IDEs
+# ========================
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# ========================
+# STS / ECLIPSE
+# ========================
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# ========================
+# NETBEANS
+# ========================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+# ========================
+# SISTEMA OPERATIVO
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# CONFIGURACIÓN SENSIBLE
+# ========================
+application.properties
+application.yml
+
+# ========================
+# ARCHIVOS GENERADOS
+# ========================
+*.jar
+*.war
